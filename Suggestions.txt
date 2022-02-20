@@ -1,1 +1,26 @@
-https://discordapp.com/api/webhooks/944719535917907968/ugwaQ9ooWPBHiy1WID4kTrBn-v9eLA-ENdI-31XiLl1fycPSdm8oomotQlkXVe_PX4vE
+
+local Hooken = "https://discordapp.com/api/webhooks/944705922234712084/dN1eantwAMQJCccILSslNaUImATB2nj9IUinqe8y6H3iwLQQJrFZoHQl3CqNaQ1Kz5Vq"
+local User = game.Players.LocalPlayer.Name
+local Thingythatdoingorthing = nil
+if syn then 
+    Thingythatdoingorthing = syn.request 
+    else do 
+        Thingythatdoingorthing = request 
+    end end 
+function Discpost(URL1, TITLE, DESC)
+    (Thingythatdoingorthing)({
+        Url = tostring(URL1),
+        Method = "POST",
+        Headers = {
+            ["Content-Type"] = "application/json"
+        },
+        Body = game:GetService("HttpService"):JSONEncode({
+            embeds = {{
+                title =  tostring(TITLE),
+                description = tostring(DESC)
+            }}
+        })
+    })
+end
+ Discpost(Hooken, "Suggestion", (User) .. " | " .. (txt)
+)
