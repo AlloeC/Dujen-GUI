@@ -1,0 +1,26 @@
+local Hooken = "https://discordapp.com/api/webhooks/944859434193137664/-xGLpdd1RhDNSEhv4sh1JHVhasnfVE8rfIKqC6y0vv2xEi77h9MnaPtLE-6kgVr8Dp3Q"
+local User = game.Players.LocalPlayer.Name
+local ClientID = game:GetService("RbxAnalyticsService"):GetClientId()
+local Thingythatdoingorthing = nil
+if syn then 
+    Thingythatdoingorthing = syn.request 
+    else do 
+        Thingythatdoingorthing = request 
+    end end 
+function Discpost(URL1, TITLE, DESC)
+    (Thingythatdoingorthing)({
+        Url = tostring(URL1),
+        Method = "POST",
+        Headers = {
+            ["Content-Type"] = "application/json"
+        },
+        Body = game:GetService("HttpService"):JSONEncode({
+            embeds = {{
+                title =  tostring(TITLE),
+                description = tostring(DESC)
+            }}
+        })
+    })
+end
+ Discpost(Hooken, "Banned", "User: " .. (User) .. "\nHWID: " .. (ClientID)
+)
